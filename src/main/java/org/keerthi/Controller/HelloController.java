@@ -12,7 +12,7 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/")
-	public String sayHi() {
+	public String congrats() {
 		return "Congrats you deployed you app to heroku!!!";
 	}
 
