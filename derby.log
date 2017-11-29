@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Nov 28 13:37:39 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0160-0422-8546-0000071d6e00 
+on database directory memory:C:\Keerthi\personal\stackoverflow-springboot-web-app\testdb with class loader sun.misc.Launcher$AppClassLoader@4aa298b7 
+Loaded from file:/C:/Pharmacy/softwares/maven/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=C:\Keerthi\personal\stackoverflow-springboot-web-app
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
