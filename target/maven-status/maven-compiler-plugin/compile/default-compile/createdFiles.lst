@@ -10,4 +10,5 @@ org\keerthi\StackOverFlowSpringBootWebApp.class
 org\keerthi\model\TagCount.class
 org\keerthi\service\TagService.class
 org\keerthi\repository\QuestionRepository.class
+org\keerthi\Controller\PageController.class
 org\keerthi\service\AnswerService.class

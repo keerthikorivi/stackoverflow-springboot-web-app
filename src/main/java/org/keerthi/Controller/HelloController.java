@@ -11,10 +11,10 @@ public class HelloController {
 		return "Hi!!!";
 	}
 	
-	@RequestMapping("/")
+	/*@RequestMapping("/")
 	public String congrats() {
 		return "Congrats you deployed you app to heroku!!!";
 	}
-
+*/
 
 }
