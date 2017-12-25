@@ -5,9 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   	<link rel="stylesheet" type="text/css" href="css/tags.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="tags.js"></script>
+  <style>
+  .bottom-right
+{
+    position: absolute;
+    right: 10%;
+    top :100%  
+}
+  </style>
 </head>
 <body>
 
@@ -42,7 +50,7 @@
 <div class="container">
   <div class="col-xs-4">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for Tags..." aria-label="Search for tags...">
+      <input type="text" class="form-control"  id="tagSearch" placeholder="Search for Tags..." aria-label="Search for tags...">
       <span class="input-group-btn">
         <button class="btn btn-secondary" type="button">Go!</button>
       </span>
@@ -60,36 +68,27 @@
 </div>
 <div class="container" id="bodyDiv">
   Here is the body u need to update
+ 
 </div>
-<script>
-$(document).ready(function(){
-	
-	$.getJSON( "/tags", function( data ) {
-		  var items = [];
-		  $.each( data, function( key, val ) {
-		    items.push( "<li id='" + key + "'>" + val + "</li>" );
-		  });
-		  $("#bodyDiv").html(items);
-		 
-		  $( "<ul/>", {
-		    "class": "my-new-list",
-		    html: items.join( "" )
-		  }).appendTo( "#bodyDiv" );
-		});
-	
-    $("#popularTags").click(function(){
-        $("#bodyDiv").html("popularTags are set here!!!");
-    });
-    
-    $("#tagsByName").click(function(){
-    	$("#bodyDiv").html("tagsByName are set here!!!");
-    });
-    
-    $("#newTags").click(function(){
-    	$("#bodyDiv").html("newTags are set here!!!");
-    });
 
-});
-</script>
+
+<div class="bottom-right">
+	<nav aria-label="...">
+	  <ul class="pagination">
+	    <li class="page-item disabled">
+	      <a class="page-link" href="#" tabindex="-1">Previous</a>
+	    </li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item active">
+	      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+	    </li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item">
+	      <a class="page-link" href="#">Next</a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+<script type="text/javascript" src="js/tags.js"></script>
 </body>
 </html>

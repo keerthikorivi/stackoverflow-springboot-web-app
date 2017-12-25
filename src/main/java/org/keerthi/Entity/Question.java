@@ -9,6 +9,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -23,6 +25,7 @@ public class Question implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "question_id", unique = true)
 	private BigInteger id;
 	
@@ -36,7 +39,7 @@ public class Question implements java.io.Serializable {
 	
 	private String body;
 	
-	@OneToMany(fetch = FetchType.LAZY,mappedBy = "question", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
 	private Set<Answer> answers;
 	
 	  public Question()
